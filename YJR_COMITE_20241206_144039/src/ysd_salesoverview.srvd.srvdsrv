@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition Resumen Ventas'
+define service YSD_SALESOVERVIEW {
+  expose YC_SalesOverview as SalesOverview;
+}

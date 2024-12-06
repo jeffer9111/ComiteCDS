@@ -1,0 +1,65 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo.typeNamePlural: 'Resumen Ventas'
+//@UI.headerInfo:{
+//  typeName: 'Resumen Crédito',
+//  typeNamePlural: 'Resumen Crédito',
+//  title:{
+//    type: #STANDARD
+//  }
+//}
+annotate entity YC_SalesOverview with
+{
+  @UI.lineItem: [{
+    position: 10
+  }]
+  @UI.selectionField: [{
+    position: 10
+  }]
+  @Consumption.valueHelpDefinition: [{
+    entity: {
+      element: 'Customer',
+      name: 'I_Customer'
+    },
+    additionalBinding: [{
+      element: 'Customer',
+      localElement: 'SoldToParty'
+    }]
+  }]
+
+  SoldToParty;
+
+  @UI.lineItem: [{
+    position: 20
+  }]
+  CustomerName;
+
+  @UI.lineItem: [{
+    position: 30
+  }]
+  FiscalYear;
+
+  @UI.lineItem: [{
+    position: 40
+  }]
+  NetAmount;
+
+  @UI.lineItem: [{
+    position: 50
+  }]
+  NumberOfOffers;
+
+  @UI.lineItem: [{
+    position: 60 ,
+    criticality: 'CriticallyClassification'
+  }]
+  @UI.selectionField: [{
+    position: 20
+  }]
+  CustomerClassification;
+
+  @UI.hidden: true
+  CriticallyClassification;
+
+  @UI.hidden: true
+  Currency;
+}

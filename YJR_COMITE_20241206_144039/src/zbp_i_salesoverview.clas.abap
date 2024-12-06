@@ -1,0 +1,5 @@
+CLASS zbp_i_salesoverview DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF yi_salesoverview.
+ENDCLASS.
+
+CLASS zbp_i_salesoverview IMPLEMENTATION.
+ENDCLASS.

@@ -1,0 +1,13 @@
+unmanaged implementation in class zbp_i_salesoverview unique;
+strict ( 2 );
+
+define behavior for YI_SalesOverview alias SalesOverview
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+//  create;
+//  update;
+//  delete;
+}
